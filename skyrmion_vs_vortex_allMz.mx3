@@ -1,0 +1,47 @@
+setgridsize(256, 256, 1)
+setcellsize(5e-9, 5e-9, 5e-9)
+
+// circulation: 1 = ccw, -1 = cw
+// polarization: 1 = +Mz, -1 = -Mz
+
+
+// // // ccw set
+m = Vortex(1, -1)     // circulation, polarization
+saveas(m, "vortex_nMz_ccw")
+
+m = BlochSkyrmion(1, -1).scale(3,3,1)
+saveas(m, "Bloch_skyrmion_nMz_ccw")
+
+m = NeelSkyrmion(1,-1).scale(3,3,1)
+saveas(m, "Néel_skyrmion_nMz_out")
+
+// // // cw set
+m = Vortex(-1, -1)     // circulation, polarization
+saveas(m, "vortex_nMz_cw")
+
+m = BlochSkyrmion(-1, -1).scale(3,3,1)
+saveas(m, "Bloch_skyrmion_nMz_cw")
+
+m = NeelSkyrmion(-1,-1).scale(3,3,1)
+saveas(m, "Néel_skyrmion_nMz_in")
+
+
+// // // ccw set
+m = Vortex(1, 1)     // circulation, polarization
+saveas(m, "vortex_pMz_ccw")
+
+m = BlochSkyrmion(1, 1).scale(3,3,1)
+saveas(m, "Bloch_skyrmion_pMz_ccw")
+
+m = NeelSkyrmion(1,1).scale(3,3,1)
+saveas(m, "Néel_skyrmion_pMz_out")
+
+// // // cw set
+m = Vortex(-1, 1)     // circulation, polarization
+saveas(m, "vortex_pMz_cw")
+
+m = BlochSkyrmion(-1, 1).scale(3,3,1)
+saveas(m, "Bloch_skyrmion_pMz_cw")
+
+m = NeelSkyrmion(-1,1).scale(3,3,1)
+saveas(m, "Néel_skyrmion_pMz_in")
